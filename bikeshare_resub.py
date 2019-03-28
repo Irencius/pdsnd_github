@@ -6,7 +6,7 @@ CITY_DATA = {"chicago": "chicago.csv",
               "new york city": "new_york_city.csv",
               "washington": "washington.csv"}
 
-# Lists to check validity of user inputs
+# Lists to check validity of user inputs in terms of type and content
 month_list = ["january",
             "february",
             "march",
@@ -138,6 +138,22 @@ def time_stats(df):
     print("-"*40)
 
 
+def trip_duration_stats(df):
+    """Displays statistics on the total and average trip duration."""
+
+    print("\nCalculating Trip Duration...\n")
+    start_time = time.time()
+
+    # Display total travel time
+    print("\nTotal travel time:\n", df["Travel Time"].sum())
+
+    # Display mean travel time
+    print("\nMean travel time:\n", df["Travel Time"].mean())
+
+    print("\nThis took %s seconds." % (time.time() - start_time))
+    print("-"*40)
+
+
 def station_stats(df):
     """Displays statistics on the most popular stations and trip."""
 
@@ -156,21 +172,6 @@ def station_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print("-"*40)
 
-
-def trip_duration_stats(df):
-    """Displays statistics on the total and average trip duration."""
-
-    print("\nCalculating Trip Duration...\n")
-    start_time = time.time()
-
-    # Display total travel time
-    print("\nTotal travel time:\n", df["Travel Time"].sum())
-
-    # Display mean travel time
-    print("\nMean travel time:\n", df["Travel Time"].mean())
-
-    print("\nThis took %s seconds." % (time.time() - start_time))
-    print("-"*40)
 
 
 def user_stats(df):
