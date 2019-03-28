@@ -6,7 +6,7 @@ CITY_DATA = {"chicago": "chicago.csv",
               "new york city": "new_york_city.csv",
               "washington": "washington.csv"}
 
-# Lists to check validity of user inputs
+# Lists to check validity of user inputs in terms of type and content
 month_list = ["january",
             "february",
             "march",
